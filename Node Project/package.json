@@ -1,0 +1,9 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "bleno": "0.4.0"
+  }
+}
