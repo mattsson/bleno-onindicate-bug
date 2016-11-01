@@ -22,10 +22,13 @@ var bodyAnalysisDataCharacteristic = new Characteristic({
     },
     onIndicate: function() {
         console.log('Did get indication. Will update value.')
+        // On Linux, we only get one indication here
+        callback(new Buffer("data"))
 
-        setTimeout(function(){
-            callback(new Buffer("data"))
-        }, 0)
+        // Fix:
+        // setTimeout(function(){
+        //     callback(new Buffer("data"))
+        // }, 0)
     }
 })
 
