@@ -22,7 +22,10 @@ var bodyAnalysisDataCharacteristic = new Characteristic({
     },
     onIndicate: function() {
         console.log('Did get indication. Will update value.')
-        callback(new Buffer("data"))
+
+        setTimeout(function(){
+            callback(new Buffer("data"))
+        }, 0)
     }
 })
 
